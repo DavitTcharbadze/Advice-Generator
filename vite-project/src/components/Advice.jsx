@@ -25,12 +25,23 @@ export default function Advice() {
 
   return (
     <div className={classes['advice-wrapper']}>
-      <h2>Advice #{adviceId}</h2>
-      <h1>{adviceText}</h1>
-      <img className={classes['divide']} src={Divide} alt="" /> <br />
-      <button onClick={getNewAdvice}>
-        <img src={Dice} alt="dice" />
-      </button>
+      <div className={classes['advice-box']}>
+        <div className={classes['title']}>
+          <h2>Advice #{adviceId}</h2>
+        </div>
+        <div className={classes['advice']}>
+          <h1>{adviceText}</h1>
+        </div>
+        
+      <div className={classes['img']}>
+        <img className={classes['divide']} src={Divide} alt="" /> <br />
+      </div>
+        <div className={classes['button']}>
+          <button onClick={getNewAdvice}>
+            <img src={Dice} alt="dice" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
